@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Sofia Pro';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: local('Sofia Pro'),
+	url('/fonts/sofia-pro.woff2') format("woff2"),
+	url('/fonts/sofia-pro.woff') format("woff"),
+	url('/fonts/sofia-pro.otf') format("opentype");
+}
+
+
+@font-face {
+	font-family: 'Sofia Pro';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: local('Sofia Pro Medium'),
+	url('/fonts/sofia-pro-medium.woff2') format("woff2"),
+	url('/fonts/sofia-pro-medium.woff') format("woff"),
+	url('/fonts/sofia-pro-medium.otf') format("opentype");
+}
+
+
+
+
+@font-face {
+	font-family: 'Guthen Bloots';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Guthen Bloots'),
+	url('/fonts/guthen-bloots.woff2') format("woff2"),
+	url('/fonts/guthen-bloots.woff') format("woff"),
+	url('/fonts/guthen-bloots.otf') format("opentype");
+}

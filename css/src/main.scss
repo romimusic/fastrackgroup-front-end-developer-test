@@ -1,0 +1,226 @@
+
+/**
+ * ----------------------------
+ * Bootstrap variable overrides
+ * ----------------------------
+ */
+$headings-font-family: "Guthen Bloots", sans-serif;
+$font-family-base: "Sofia Pro", sans-serif;
+$font-family-sans-serif: $font-family-base;
+$font-weight-medium: 500;
+
+$teal: #00746D;
+$coral: #F68F7C;
+
+$primary: $coral;
+$secondary: $teal;
+
+
+/**
+ * Libraries
+ */
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "modules/fonts";
+
+
+@import "../../node_modules/@splidejs/splide/dist/css/splide-core.min.css";
+@import "../../node_modules/@splidejs/splide/dist/css/splide.min.css";
+
+html {
+  background-color: #f8f9fa;
+}
+
+.title {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  color: $secondary;
+
+  @media (max-width: 1200px) {
+    width: 70%;
+  }
+
+  @media (max-width: 720px) {
+    position: unset;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.splide {
+
+  &__arrows {
+    position: absolute;
+    top: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90px;
+    margin-left: 59%;
+    transform: scale(1.5) rotate(90deg);
+    z-index: 99;
+
+    .splide__arrow {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color:#adddd1;
+      border: none;
+      opacity: 1;
+
+      svg {
+        fill: #ffffff
+      }
+
+      &--prev {
+        transform: rotate(90deg);
+
+        @media (max-width: 720px) {
+          transform: rotate(0deg);
+          margin-left: 20px;
+        }
+      }
+
+      &--next {
+        transform: rotate(-90deg);
+
+        @media (max-width: 720px) {
+          transform: rotate(0deg);
+          margin-right: 20px;
+        }
+      }
+    }
+
+    @media (max-width: 1200px) {
+      margin-left: 45%;
+    }
+
+    @media (max-width: 720px) {
+      width: 100%;
+      top: 130px;
+      flex-direction: row;
+      margin: 0;
+      transform: rotate(0deg);
+   }
+  }
+
+  &__slide {
+    margin-right: 2rem; 
+    width: 100%; 
+    display: flex;
+    align-items: center;
+
+    figure {
+      width: 65%;
+      height: 420px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    @media (max-width: 1200px) {
+      width: 50%;
+    }
+
+    @media (max-width: 720px) {
+      width: 80%;
+      height: 280px;
+      margin: 0;
+    }
+
+  }
+      
+  @media (max-width: 720px) {
+      position: unset;
+      width: 100%;
+      flex-direction: column;
+   }
+
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 7%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+    &__page {
+      background-color: $primary;
+      opacity: 0.3;
+
+      &.is-active {
+        background-color: $primary;
+        transform: scale(1.8);
+        opacity: 1;
+      }
+  }
+
+  @media (max-width: 720px) {
+    top: -30px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+  &__info {
+    position: absolute;
+    right: 2%;
+    width: 38%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h3 {
+      font-family: $font-family-base;
+      color: $primary;
+    }
+
+    p {
+      width: 80%;
+      font-family: $font-family-base;
+      font-weight: lighter;
+
+      @media (max-width: 720px) {
+      width: 100%;
+   }
+  }
+
+    button {
+      width: 30%;
+      background-color: $primary;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      font-family: $font-family-base;
+
+      &:hover {
+        opacity: .7;
+      }
+
+    @media (max-width: 1200px) {
+      width: 50%;
+    }
+
+    @media (max-width: 720px) {
+      width: 100%;
+  }
+  }
+
+  @media (max-width: 1200px) {
+    width: 55%;
+  }
+
+  @media (max-width: 720px) {
+    position: unset;
+    width: 80%;
+  }
+
+  }
+}
